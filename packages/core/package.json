@@ -1,0 +1,37 @@
+{
+  "name": "yuguaa-limit",
+  "version": "1.0.0",
+  "description": "",
+  "author": "yuguaa",
+  "license": "ISC",
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch"
+  },
+  "keywords": [
+    "http",
+    "promise",
+    "p-limit"
+  ],
+  "homepage": "https://github.com/yuguaa/yuguaa-limit",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yuguaa/yuguaa-limit"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "module": "dist/index.mjs",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "tsup": "^6.6.0"
+  }
+}

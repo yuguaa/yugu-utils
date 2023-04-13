@@ -1,0 +1,19 @@
+{
+  "name": "yuguaa-limit-monorepo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "pnpm --filter yuguaa-limit dev",
+    "build": "pnpm --filter yuguaa-limit build",
+    "playground":"pnpm --filter vite-vue dev",
+    "release": "bumpp package.json packages/core/package.json --commit --push --tag && pnpm --filter yuguaa-limit publish --access public"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "bumpp": "^8.2.1",
+    "typescript": "~4.7.4"
+  }
+}
