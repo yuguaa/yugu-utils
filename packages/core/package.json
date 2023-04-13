@@ -1,6 +1,6 @@
 {
-  "name": "yuguaa-limit",
-  "version": "1.0.0",
+  "name": "@yugu-utils",
+  "version": "1.0.1",
   "description": "",
   "author": "yuguaa",
   "license": "ISC",
@@ -9,14 +9,13 @@
     "dev": "tsup --watch"
   },
   "keywords": [
-    "http",
-    "promise",
-    "p-limit"
+    "axios",
+    "utils"
   ],
-  "homepage": "https://github.com/yuguaa/yuguaa-limit",
+  "homepage": "https://github.com/yuguaa/yugu-utils",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yuguaa/yuguaa-limit"
+    "url": "https://github.com/yuguaa/yugu-utils"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -33,5 +32,9 @@
   ],
   "devDependencies": {
     "tsup": "^6.6.0"
+  },
+  "dependencies": {
+    "axios": "^1.3.5",
+    "js-cookie": "^3.0.1"
   }
 }
