@@ -1,2 +1,2 @@
-# @yugu-utils
+# @yugu/utils
 yugu-utils
