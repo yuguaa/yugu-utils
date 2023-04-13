@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "pnpm --filter @yugu-utils dev",
-    "build": "pnpm --filter @yugu-utils build",
+    "dev": "pnpm --filter @yugu/utils dev",
+    "build": "pnpm --filter @yugu/utils build",
     "playground": "pnpm --filter vite-vue dev",
     "release": "pnpm --filter @yugu/utils release"
   },
