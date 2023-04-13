@@ -1,2 +1,2 @@
-# yuguaa-lib-template
-lib开发模板
+# @yugu-utils
+yugu-utils

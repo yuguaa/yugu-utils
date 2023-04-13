@@ -1,5 +1,5 @@
 {
-  "name": "@yugu-utils-monorepo",
+  "name": "@yugu/utils-monorepo",
   "version": "1.0.1",
   "description": "",
   "main": "index.js",
@@ -7,7 +7,7 @@
     "dev": "pnpm --filter @yugu-utils dev",
     "build": "pnpm --filter @yugu-utils build",
     "playground": "pnpm --filter vite-vue dev",
-    "release": "bumpp package.json packages/core/package.json --commit --push --tag && pnpm --filter @yugu-utils publish --access public"
+    "release": "pnpm --filter @yugu/utils release"
   },
   "keywords": [],
   "author": "",
