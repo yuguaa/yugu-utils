@@ -60,13 +60,13 @@ class Login {
             }
             resolve(res.data)
           } else {
-            ;(this.loginErrorCapture && this.loginErrorCapture()) || this.logout()
+            ;(this.loginErrorCapture && this.loginErrorCapture(res)) || this.logout()
             reject(res.data)
           }
         })
         .catch(err => {
           console.log(`🚀 ~ TbcLogin ~ returnnewPromise ~ err:`, err)
-          ;(this.loginErrorCapture && this.loginErrorCapture()) || this.logout()
+          ;(this.loginErrorCapture && this.loginErrorCapture(err)) || this.logout()
           reject(err)
         })
     })
