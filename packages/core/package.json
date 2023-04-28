@@ -1,13 +1,13 @@
 {
   "name": "@yugu/utils",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "author": "yuguaa",
   "license": "ISC",
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
-    "release": "pnpm build&& npm version patch && pnpm publish --access public"
+    "release": "pnpm build&& npm version patch && pnpm publish --no-git-checks --access public"
   },
   "keywords": [
     "axios",
