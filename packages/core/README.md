@@ -26,6 +26,18 @@ const tbcLogin = new Login({
 
 tbcLogin.login()
 ```
+#### 项目配置
+项目需要配置代理转发，解决登录跨域问题。
+```javascript
+  // react
+app.use(
+    createProxyMiddleware('/tbc-nest', {
+      target: 'http://21tb-vuelibrary.21tb.com/tbc-nest',
+      changeOrigin: true,
+    }),
+  )
+
+```
 #### 配置
 
 以下为示例 api 形式 ， 以供参考
