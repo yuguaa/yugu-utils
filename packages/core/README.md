@@ -27,7 +27,7 @@ const tbcLogin = new Login({
 tbcLogin.login()
 ```
 #### 项目配置
-项目需要配置代理转发，解决登录跨域问题。
+项目需要配置代理转发，解决登录跨域问题。后台代理地址 `http://21tb-vuelibrary.21tb.com/tbc-nest`
 ```javascript
   // react
 app.use(
