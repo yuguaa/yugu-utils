@@ -17,10 +17,10 @@ import axios from 'axios'
 import Cookies from 'js-cookie'
 class Login {
   // static loginUrl = 'http://21tb-vuelibrary.21tb.com/tbc-nest'
-  constructor({ goToLogin, ELN_SESSTION_ID, mode, ...loginOptions }) {
-    this.ELN_SESSTION_ID = ELN_SESSTION_ID || 'eln_session_id'
+  constructor({ loginErrorCapture, elnSessionId, mode, ...loginOptions }) {
+    this.elnSessionId = elnSessionId || 'eln_session_id'
     this.mode = mode || 'production'
-    this.goToLogin = goToLogin
+    this.loginErrorCapture = loginErrorCapture
     this.loginOptions = loginOptions
   }
   // getProcessEnvMode() {
@@ -56,23 +56,23 @@ class Login {
             if (this.isDevMode()) {
               Cookies.set('corp_code', res.data.bizResult.corpCode)
               Cookies.set('corpCode', res.data.bizResult.corpCode)
-              Cookies.set(this.ELN_SESSTION_ID, res.data.bizResult.sessionId, 'Session')
+              Cookies.set(this.elnSessionId, res.data.bizResult.sessionId, 'Session')
             }
             resolve(res.data)
           } else {
-            ;(this.goToLogin && this.goToLogin()) || this.logout()
+            ;(this.loginErrorCapture && this.loginErrorCapture()) || this.logout()
             reject(res.data)
           }
         })
         .catch(err => {
           console.log(`🚀 ~ TbcLogin ~ returnnewPromise ~ err:`, err)
-          ;(this.goToLogin && this.goToLogin()) || this.logout()
+          ;(this.loginErrorCapture && this.loginErrorCapture()) || this.logout()
           reject(err)
         })
     })
   }
   logout() {
-    Cookies.remove(this.ELN_SESSTION_ID)
+    Cookies.remove(this.elnSessionId)
     const href = window.location.href
     const returnUrl = encodeURIComponent(href)
     const origin = window.origin.includes('localhost') ? 'http://cloud.21tb.com' : window.origin
