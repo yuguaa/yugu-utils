@@ -7,7 +7,7 @@
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
-    "release": "pnpm build && pnpm publish --access public"
+    "release": "pnpm build&& npm version patch && pnpm publish --access public"
   },
   "keywords": [
     "axios",
