@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-export class YuguAxios {
+class YuguAxios {
   static axiosInstance = null
   constructor(options) {
     this.createAxios(options)
@@ -75,3 +75,4 @@ export class YuguAxios {
     })
   }
 }
+export default YuguAxios

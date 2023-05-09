@@ -1,13 +1,14 @@
 {
   "name": "@yugu/utils",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "",
   "author": "yuguaa",
   "license": "ISC",
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
-    "release": "pnpm build&& npm version patch && pnpm publish --no-git-checks --access public"
+    "genMd": "node ./genMd.js",
+    "release": "pnpm run genMd &&pnpm build&& npm version patch && pnpm publish --no-git-checks --access public"
   },
   "keywords": [
     "axios",

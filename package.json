@@ -7,6 +7,7 @@
     "dev": "pnpm --filter @yugu/utils dev",
     "build": "pnpm --filter @yugu/utils build",
     "playground": "pnpm --filter vite-vue dev",
+    "genMd": "pnpm --filter @yugu/utils genMd",
     "release": "pnpm --filter @yugu/utils release"
   },
   "keywords": [],
