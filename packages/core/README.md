@@ -16,10 +16,10 @@ npm install @yugu/utils
 import { Login } from '@yugu/utils'
 
 const tbcLogin = new Login({
-  corpCode: 'happy',
-  account: 'yzj',
-  password: 'Yzj123456',
-  stage: 'http://cloud.21tb.com',
+  corpCode: 'xxx',
+  account: 'xxx',
+  password: 'xxxxxx',
+  stage: 'http://xxx.21tb.com',
   mode: process.env.NODE_ENV,
 })
 
